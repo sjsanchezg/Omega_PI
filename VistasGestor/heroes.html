@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestion Heroes</title>
+    <link rel="stylesheet" type="text/css" href='/css/GestionCartas.css'>
+    <link href='https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;800&family=Irish+Grover&family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href='#'>Subasta</a>
+            <a href='#'>Intercambio</a>
+            <a href='#'>Torneos</a>
+        </nav>
+        <nav class="nav">
+            <a href='#'>Mi banco</a>
+            <a href='#'>Jugar online</a>
+            <a href='#'>Perfil</a>
+        </nav>
+    </header>
+    <br>
+    <center>
+        <div class="button-container">
+            <div class="cartalink link">
+                <a href='/admin/crearcarta' class='no-underline'>Añadir Heroe</a>
+            </div>
+            <div class="cartalink link">
+                <a href='/' class='no-underline'>Inicio</a>
+            </div>
+        </div>
+    </center>
+    <br>
+    <div class="caja">
+        <!-- Aquí comienza el bucle "each hero in heroes" -->
+        <!-- Asegúrate de que esta sección se repita dinámicamente con tus datos -->
+        <!-- Replace "{{...}}" with actual data as needed -->
+        {{ each hero in heroes }}
+        <div id="bordeCarta" class="carta2" style='background:rgba(17,18,18,1); color:white; border:1px solid rgba(255,244,0,1);'>
+            <div class="titulo">
+                <a href='https://store.thenexusbattles2.cloud/carta/{{ hero._id }}' style='text-decoration: none; color: white;'>
+                    <p class='2xl:text-[18px] md:text-[14px]'>{{ hero.clase }}</p>
+                </a>
+            </div>
+            <div class="img">
+                <img src="{{ hero.urlImagen }}" alt='imagen de {{ hero.clase }} {{ hero.tipo }}'>
+                <div class="overlay"></div>
+            </div>
+            <div class="contenido 2xl:w-[220px] 2xl:h-[75px] md:sm:w-[165px] md:sm:h-[50px]">
+                <div class="propiedad">
+                    <p class='2xl:text-[16px] md:text-[11px]'>Poder: {{ hero.poder }}</p>
+                    <p class='2xl:text-[16px] md:text-[11px]'>Tipo: {{ hero.tipo }}</p>
+                </div>
+                <div class="propiedad">
+                    <p class='2xl:text-[16px] md:text-[11px]'>Vida: {{ hero.vida }}</p>
+                    <p class='2xl:text-[16px] md:text-[11px]'>Ataque: {{ hero.ataqueBase }}</p>
+                </div>
+                <div class="propiedad">
+                    <p class='2xl:text-[16px] md:text-[11px]'>Defensa: {{ hero.defensa }}</p>
+                    <p class='2xl:text-[16px] md:text-[11px]'>Daño: {{ hero.danoMax }}</p>
+                </div>
+            </div>
+            <div class="button-container">
+                <a class="link suspender" href='/admin/actualizarcarta/{{ hero._id }}'>Modificar</a>
+                <button class="link suspender" type='button' data-hero-id="{{ hero._id }}" data-is-active="{{ hero.activo }}" onclick="cambiarEstadoHeroe(event)">
+                    {{ hero.activo ? 'Suspender' : 'Activar' }}
+                </button>
+            </div>
+        </div>
+        {{ /each }}
+        <!-- Fin del bucle "each hero in heroes" -->
+        <br>
+    </div>
+    <center>
+        <ul class="pagination">
+            <!-- Aquí comienza el bucle "each pageNum in Array(totalPages).fill().map((_, i) => i + 1)" -->
+            <!-- Asegúrate de que esta sección se repita dinámicamente con tus datos -->
+            {{ each pageNum in Array(totalPages).fill().map((_, i) => i + 1) }}
+            <li>
+                <a href='/admin/heroes?page={{ pageNum }}' class="{{ pageNum === currentPage ? 'current' : '' }}">{{ pageNum }}</a>
+            </li>
+            {{ /each }}
+            <!-- Fin del bucle "each pageNum in Array(totalPages).fill().map((_, i) => i + 1)" -->
+        </ul>
+    </center>
+</body>
+<script src='/js/scriptCartas.js'></script>
+</html>

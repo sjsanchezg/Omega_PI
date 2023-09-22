@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestion Cartas</title>
+    <link rel="stylesheet" type="text/css" href="/css/GestionSesion.css">
+    <link href='https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;800&family=Irish+Grover&family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#">Subasta</a>
+            <a href="#">Intercambio</a>
+            <a href="#">Torneos</a>
+        </nav>
+        <nav class="nav">
+            <a href="#">Mi banco</a>
+            <a href="#">Jugar online</a>
+            <a href="PerfilUsuario.html">Perfil</a>
+        </nav>
+    </header>
+    <br>
+    <h2 style="text-align: center;">Ingreso de Usuarios Autorizados</h2>
+    <br>
+    <form action="/auth/iniciosesion" method="POST">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="add_user">
+                            <input type="text" name="usuario" placeholder="Usuario">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="add_user">
+                            <input type="password" name="contrasena" placeholder="Contraseña">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button class="sesion" type="submit">Iniciar Sesion</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
