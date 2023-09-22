@@ -18,11 +18,8 @@
             <h1>Crear nueva Épica</h1>
         </header>
         <form class="card-form" action="/admin/crearepica" method="post" enctype="multipart/form-data">
-            <label for="urlImagen">
-                <span class="custom-upload-button">Subir imagen:</span>
-                <input type="file" name="urlImagen" id="urlImagen" accept="image/*" required style="position: absolute; opacity: 0;">
-                <span id="file-name-span" class="file-name"></span>
-            </label>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" required>
             <label for="heroe">Héroe:</label>
             <select name="heroe" id="heroe" required>
                 <option value="Guerrero Tanque">Guerrero Tanque</option>
@@ -32,8 +29,6 @@
                 <option value="Pícaro Veneno">Pícaro Veneno</option>
                 <option value="Pícaro Machete">Pícaro Machete</option>
             </select>
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" id="nombre" required>
             <label for="efectoGlobal.case">Efecto Global - Case:</label>
             <input type="number" name="efectoGlobal.case" id="efectoGlobal.case" required>
             <label for="efectoGlobal.statEffect">Efecto Global - Stat Effect:</label>
@@ -61,6 +56,11 @@
             </select>
             <label for="desc">Descripción:</label>
             <textarea name="desc" id="desc" required></textarea>
+            <label for="urlImagen">
+                <span class="custom-upload-button">Subir imagen:</span>
+                <input type="file" name="urlImagen" id="urlImagen" accept="image/*" required style="position: absolute; opacity: 0;">
+                <span id="file-name-span" class="file-name"></span>
+            </label>
             <button type="submit">Crear Épica</button>
         </form>
     </div>
