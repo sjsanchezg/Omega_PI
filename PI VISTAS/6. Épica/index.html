@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Épica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="banner">
+        <main>
+          <img src="/img/banner.png" alt="banner">
+          <h1>CREACIÓN DE ÉPICA</h1>
+        </main>
+      </div>
+
+      <div class="container">
+        <header>
+          <h1>INFORMACIÓN DE LA CARTA</h1>
+        </header>
+        <form class="card-form">
+          <label for="imageURL">URL de la imagen:</label>
+          <input type="text" id="imageURL" name="imagenURL" required>
+
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+          
+          <label for="héroe">Héroe:</label>
+          <input type="text" id="héroe" name="héroe" required><br><br>
+          
+          <label for="eg" class="EfGl">Efecto Global</label>
+
+          <label for="caso">Caso:</label>
+          <input type="number" id="caso" name="caso" required>
+          
+          <label for="efectoestádistica">Efecto Estádistica:</label>
+          <input type="number" id="efectoestádistica" name="efectoestádistica" required>
+          
+          <label for="estadística">Estadística:</label>
+          <input type="number" id="estadística" name="estadística" required>
+
+          <label for="objetivo">Objetivo:</label>
+          <input type="text" id="objetivo" name="objetivo" required>
+
+          <label for="númerodeturnos">Número de Turnos:</label>
+          <input type="text" id="númerodeturnos" name="númerodeturnos" required> <br><br>
+
+          <label for="eh" class="EfHr">Efecto Héroe</label>
+
+          <label for="caso">Caso:</label>
+          <input type="number" id="caso" name="caso" required>
+          
+          <label for="efectoestádistica">Efecto Estádistica:</label>
+          <input type="number" id="efectoestádistica" name="efectoestádistica" required>
+          
+          <label for="estadística">Estadística:</label>
+          <input type="number" id="estadística" name="estadística" required>
+
+          <label for="objetivo">Objetivo:</label>
+          <input type="text" id="objetivo" name="objetivo" required>
+
+          <label for="númerodeturnos">Número de Turnos:</label>
+          <input type="text" id="númerodeturnos" name="númerodeturnos" required>
+          
+          <label for="status">Estado:</label>
+          <select id="status" name="estado" required>
+            <option value="activo">Activo</option>
+            <option value="inactivo">Inactivo</option>
+          </select>
+          
+          <label for="description">Descripción:</label>
+          <textarea id="description" name="descripción" required></textarea>
+          
+          <button type="submit">Crear carta</button>
+        </form>
+    </div>
+
+</body>
+</html>
