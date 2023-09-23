@@ -1,11 +1,11 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url('/img/fondo.png');
+  background-image: url('/VistasGestor/img/fondo.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Irish Grover';
 }
 .banner {
   position: absolute;
@@ -24,7 +24,7 @@ body {
 }  
 .banner h1 {
   position: absolute;
-  top: 10%;
+  top: 8.75%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Irish Grover", "Roboto";
@@ -34,14 +34,10 @@ body {
   margin: 0;
 }
 
-
-
-
-
 .container {
   position: absolute;
   top: 22%;
-  left: 35%;
+  left: 40%;
   background-color: #818181d2;
   padding: 20px;
   border-radius: 10px;
@@ -98,10 +94,11 @@ h1 {
 }
 
 .card-form .custom-upload-button {
+  background-image: url(../img/Rectangle.png);
   display: inline-block;
   padding: 10px 20px;
   background-color: #c0a776;
-  color: white;
+  color: rgb(255, 255, 255);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -109,15 +106,40 @@ h1 {
   transition: background-color 0.3s ease; /* Agrega una transición de color de fondo */
 }
 
+button {
+  background-image: url(../img/Rectangle.png);
+  background-size: cover;
+  cursor: pointer;
+  border: none;
+  padding: 5px 20px;
+  font-size: 22px;
+  color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  font-family: 'Irish Grover';
+  transition: .8s ease;
+}
+
 .card-form .custom-upload-button:hover {
   background-color: #bd9c5a;
 }
-
-
 /* Estilos para mostrar el nombre del archivo seleccionado */
 .card-form .file-name {
   margin-top: 5px;
   font-size: 14px;
   color: #000000; /* Cambia el color del texto aquí */
+}
+
+@media (max-width: 768px) {
+  .banner h1{
+    position: relative;
+  top: 6%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Irish Grover", "Roboto";
+  font-size: 2.5rem;
+  color: white;
+  width: 100%;
+  margin: 0;
+  }
 }
 

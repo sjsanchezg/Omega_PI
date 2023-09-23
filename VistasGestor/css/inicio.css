@@ -5,6 +5,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: 'Irish Grover';
   }
 
 .banner {
@@ -83,8 +84,8 @@ body {
 }
 
 .button {
-    background-color: #d1b67e;
-    color: rgb(0, 0, 0);
+    background-image: url(../img/Rectangle.png);
+    color: white;
     padding: 5px 10px;
     border-radius: 8px;
     text-align: center;

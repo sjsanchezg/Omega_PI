@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gestion Cartas</title>
-    <link rel="stylesheet" type="text/css" href="/css/GestionSesion.css">
+    <link rel="stylesheet" type="text/css" href="../VistasGestor/css/GestionSesion.css">
     <link href='https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;800&family=Irish+Grover&family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header class="header">
@@ -21,30 +22,21 @@
         </nav>
     </header>
     <br>
-    <h2 style="text-align: center;">Ingreso de Usuarios Autorizados</h2>
-    <br>
-    <form action="/auth/iniciosesion" method="POST">
-        <table class="table">
-            <tbody>
-                <tr>
-                    <td>
-                        <div class="add_user">
-                            <input type="text" name="usuario" placeholder="Usuario">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="add_user">
-                            <input type="password" name="contrasena" placeholder="Contraseña">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <button class="sesion" type="submit">Iniciar Sesion</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </form>
+    <div class="loginb">
+        <div class="login">
+        <form action="/auth/iniciosesion" method="POST">
+            <h1>Ingreso de Usuarios Autorizados</h1>
+            <div class="inputbox"> 
+                <input type="text" required>
+                <label for="">Usuario</label>
+            </div>
+            <div class="inputbox">
+                <input type="password" required>
+                <label for="">Contraseña</label>
+            </div>
+            <button type="submit" class="btn">Ingresa</button>
+        </form>
+    </div>
+    </div>
 </body>
 </html>
