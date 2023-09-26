@@ -24,19 +24,21 @@
     <br>
     <div class="loginb">
         <div class="login">
-        <form action="/auth/iniciosesion" method="POST">
+        <form action="/auth/iniciosesion" method="POST" onsubmit="return validarNombre()">
             <h1>Ingreso de Usuarios Autorizados</h1>
             <div class="inputbox"> 
-                <input type="text" required>
-                <label for="">Usuario</label>
+                <input type="text" required id="nombre">
+                <label for="nombre">Usuario</label>
             </div>
             <div class="inputbox">
                 <input type="password" required>
                 <label for="">Contraseña</label>
             </div>
+            <div id="mensajeError" style="color: red;"></div> <!-- Elemento para mostrar el mensaje de error -->
             <button type="submit" class="btn">Ingresa</button>
         </form>
     </div>
     </div>
+    <script src="js/verificacion_sesion.js"></script>
 </body>
 </html>
