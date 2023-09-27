@@ -1,21 +1,25 @@
-function validarNombre() {
+function validar() {
     var nombreInput = document.getElementById('nombre');
     var nombre = nombreInput.value;
 
-    // Expresión regular para validar que el nombre no contenga caracteres especiales
+    var contrasenaInput = document.getElementById('contrasena');
+    var contrasena = contrasenaInput.value;
+
     var regex = /^[A-Za-z\s]+$/;
+    var mensajeError = document.getElementById('mensajeError');
 
-    var mensajeError = document.getElementById('mensajeError'); // Elemento para mostrar el mensaje de error
+    var nombreValido = regex.test(nombre);
+    var contrasenaValida = contrasena.length >= 8;
 
-    if (!regex.test(nombre)) {
+    if (!nombreValido) {
         mensajeError.textContent = "El nombre no puede contener caracteres especiales.";
-        return false; // Evita el envío del formulario
-    } else {
-        mensajeError.textContent = ""; // Borra el mensaje de error si el nombre es válido
+        return false;
     }
 
-    return true; // Permite el envío del formulario si el nombre es válido
+    if (!contrasenaValida) {
+        mensajeError.textContent = "La contraseña debe tener al menos 8 caracteres.";
+        return false;
+    }
+
+    return true;
 }
-
-
-
