@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestion Heroes</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/GestionCartas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;800&family=Irish+Grover&family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#">Subasta</a>
+            <a href="#">Intercambio</a>
+            <a href="#">Torneos</a>
+        </nav>
+        <nav class="nav">
+            <a href="#">Mi banco</a>
+            <a href="#">Jugar online</a>
+            <a href="#">Perfil</a>
+        </nav>
+    </header>
+    <br>
+    <center>
+        <div class="button-container">
+            <div class="add-card-button2">
+                <a href="/admin/crearcarta">
+                    <button class="button">
+                        Añadir Heroe
+                    </button>
+                </a>
+            </div>
+            <div class="add-card-button2">
+                <a href="/admin/armaduras">
+                    <button class="button">
+                        Armaduras
+                    </button>
+                </a>
+            </div>
+        </div>
+    </center>
+    <br>
+    <div class="container text-center d-flex justify-content-center">
+        <!-- Aquí comienza el bucle "each hero in heroes" -->
+        <!-- Asegúrate de que esta sección se repita dinámicamente con tus datos -->
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                    </div>
+                    <img src="https://media.discordapp.net/attachments/703330917036458055/1145188668819112037/image.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <p class="">Poder:</p>
+                            </div>
+                            <div class="col">
+                                <p class="">Vida:</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="">Defensa:</p>
+                            </div>
+                            <div class="col">
+                                <p class="">Tipo:</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="">Ataque:  </p>
+                            </div>
+                            <div class="col">
+                                <p class="">Daño:  </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="">Precio:  </p>
+                            </div>
+                            <div class="col">
+                                <p class="">Stock:  </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row botones_carta">
+                        <div class="col">
+                            <a href="/admin/actualizarcarta/#{hero._id}">
+                                <button class="button" href="/admin/actualizarcarta/#{hero._id}">
+                                Modificar
+                                </button>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <button class="button" type="button" data-hero-id="#{hero._id}" data-is-active="#{hero.activo}" onclick="cambiarEstadoHeroe(event)">
+                                Suspender
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                    </div>
+                    <img src="https://media.discordapp.net/attachments/703330917036458055/1145188668819112037/image.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <p class="">Poder:</p>
+                            </div>
+                            <div class="col">
+                                <p class="">Vida:</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="">Defensa:</p>
+                            </div>
+                            <div class="col">
+                                <p class="">Tipo:</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="">Ataque:  </p>
+                            </div>
+                            <div class="col">
+                                <p class="">Daño:  </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="">Precio:  </p>
+                            </div>
+                            <div class="col">
+                                <p class="">Stock:  </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row botones_carta">
+                        <div class="col">
+                            <a href="/admin/actualizarcarta/#{hero._id}">
+                                <button class="button" href="/admin/actualizarcarta/#{hero._id}">
+                                Modificar
+                                </button>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <button class="button" type="button" data-hero-id="#{hero._id}" data-is-active="#{hero.activo}" onclick="cambiarEstadoHeroe(event)">
+                                Suspender
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                    </div>
+                    <img src="https://media.discordapp.net/attachments/703330917036458055/1145188668819112037/image.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <p class="">Poder:</p>
+                            </div>
+                            <div class="col">
+                                <p class="">Vida:</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="">Defensa:</p>
+                            </div>
+                            <div class="col">
+                                <p class="">Tipo:</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="">Ataque:  </p>
+                            </div>
+                            <div class="col">
+                                <p class="">Daño:  </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="">Precio:  </p>
+                            </div>
+                            <div class="col">
+                                <p class="">Stock:  </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row botones_carta">
+                        <div class="col">
+                            <a href="/admin/actualizarcarta/#{hero._id}">
+                                <button class="button" href="/admin/actualizarcarta/#{hero._id}">
+                                Modificar
+                                </button>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <button class="button" type="button" data-hero-id="#{hero._id}" data-is-active="#{hero.activo}" onclick="cambiarEstadoHeroe(event)">
+                                Suspender
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+        <!-- Fin del bucle "each hero in heroes" -->
+    </div>
+    <center>
+        <ul class="pagination">
+            <!-- Aquí comienza el bucle "each pageNum in Array(totalPages).fill().map((_, i) => i + 1)" -->
+            <!-- Asegúrate de que esta sección se repita dinámicamente con tus datos -->
+            <li>
+                <a href="/admin/heroes?page=#{pageNum}" class="#{pageNum === currentPage ? 'current' : ''}">#{pageNum}</a>
+            </li>
+            <!-- Fin del bucle "each pageNum in Array(totalPages).fill().map((_, i) => i + 1)" -->
+        </ul>
+    </center>
+    <script src="js/bootstrap.js"></script>
+    <script src="/js/scriptCartas.js"></script>
+</body>
+</html>

@@ -4,7 +4,8 @@ body{
     padding: 0px;
     font-family: 'Irish Grover';
     background-image: url('../img/fondo-inicio.jpg');
-
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .header {
