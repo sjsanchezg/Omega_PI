@@ -37,12 +37,12 @@ body {
 .container {
   position: absolute;
   top: 22%;
-  left: 40%;
+  left: 30%;
   background-color: #818181d2;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
+  max-width: 700px;
   width: 100%;
 }
 header {
@@ -63,7 +63,7 @@ h1 {
 .card-form textarea {
   width: 94%;
   padding: 10px;
-  margin-top: 5px;
+  margin-top: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -104,6 +104,7 @@ h1 {
   cursor: pointer;
   text-align: center;
   transition: background-color 0.3s ease; /* Agrega una transición de color de fondo */
+  margin-left: 12px;
 }
 
 button {
@@ -127,6 +128,18 @@ button {
   margin-top: 5px;
   font-size: 14px;
   color: #000000; /* Cambia el color del texto aquí */
+}
+
+.column {
+  float: left;
+  width: 50%; 
+  box-sizing: border-box; 
+  padding: 10px;
+
+}
+
+.card-form {
+  clear: both;
 }
 
 @media (max-width: 768px) {

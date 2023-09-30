@@ -10,7 +10,7 @@
 <body>
     <div class="banner">
         <main>
-            <img src="/img/header.jpeg" alt="banner">
+            <img src="/VistasGestor/img/header.jpeg" alt="banner">
             <h1>CREACIÓN DE ÉPICA</h1>
         </main>
     </div>
@@ -19,6 +19,7 @@
             <h1>Crear nueva Épica</h1>
         </header>
         <form class="card-form" action="/admin/crearepica" method="post" enctype="multipart/form-data">
+            <div class="column">
             <label for="nombre">Nombre:</label>
             <input type="text" name="nombre" id="nombre" required>
             <label for="heroe">Héroe:</label>
@@ -40,16 +41,6 @@
             <input type="text" name="efectoGlobal.target" id="efectoGlobal.target" required>
             <label for="efectoGlobal.turnCount">Efecto Global - Turn Count:</label>
             <input type="number" name="efectoGlobal.turnCount" id="efectoGlobal.turnCount" required>
-            <label for="efectoHeroe.case">Efecto Héroe - Case:</label>
-            <input type="number" name="efectoHeroe.case" id="efectoHeroe.case" required>
-            <label for="efectoHeroe.statEffect">Efecto Héroe - Stat Effect:</label>
-            <input type="number" name="efectoHeroe.statEffect" id="efectoHeroe.statEffect" required>
-            <label for="efectoHeroe.stat">Efecto Héroe - Stat:</label>
-            <input type="text" name="efectoHeroe.stat" id="efectoHeroe.stat" required>
-            <label for="efectoHeroe.target">Efecto Héroe - Target:</label>
-            <input type="text" name="efectoHeroe.target" id="efectoHeroe.target" required>
-            <label for="efectoHeroe.turnCount">Efecto Héroe - Turn Count:</label>
-            <input type="number" name="efectoHeroe.turnCount" id="efectoHeroe.turnCount" required>
             <label for="activo">Activo:</label>
             <select name="activo" id="activo" required>
                 <option value="true">Activo</option>
@@ -57,12 +48,16 @@
             </select>
             <label for="poder">Poder:</label>
             <input type="number" name="poder" id="poder" required>
+            </div>
+            <div class="column">
             <label for="vida">Vida:</label>
             <input type="number" name="vida" id="vida" required>
             <label for="defensa">Defensa:</label>
             <input type="number" name="defensa" id="defensa" required>
             <label for="ataque.baseo">Ataque Base:</label>
             <input type="number" name="ataque.base" id="ataque.base" required>
+            <label for="ataque.rnd">Ataque Rnd:</label>
+            <input type="number" name="ataque.rnd" id="ataque.rnd" required>
             <label for="daño">Daño:</label>
             <input type="number" name="daño" id="daño" required>
             <label for="precio">Precio:</label>
@@ -78,7 +73,9 @@
                 <input type="file" name="urlImagen" id="urlImagen" accept="image/*" required style="position: absolute; opacity: 0;">
                 <span id="file-name-span" class="file-name"></span>
             </label>
+        </div>
             <button type="submit">Crear Épica</button>
+            <button type="submit">Cancelar</button>
         </form>
     </div>
     <script src="/js/scriptImagen.js"></script>

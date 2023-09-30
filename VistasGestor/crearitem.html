@@ -10,7 +10,7 @@
 <body>
     <div class="banner">
         <main>
-            <img src="/img/header.jpeg" alt="banner">
+            <img src="/VistasGestor/img/header.jpeg" alt="banner">
             <h1>CREACIÓN DE ITEM</h1>
         </main>
     </div>
@@ -19,6 +19,7 @@
             <h1>Crear nueva Item</h1>
         </header>
         <form class="card-form" action="/admin/crearitem" method="post" enctype="multipart/form-data">
+            <div class="column">
             <label for="nombre">Nombre:</label>
             <input type="text" name="nombre" id="nombre" required>
             <label for="heroe">Tipo de Héroe:</label>
@@ -49,12 +50,16 @@
             </select>
             <label for="poder">Poder:</label>
             <input type="number" name="poder" id="poder" required>
+            </div>
+            <div class="column">
             <label for="vida">Vida:</label>
             <input type="number" name="vida" id="vida" required>
             <label for="defensa">Defensa:</label>
             <input type="number" name="defensa" id="defensa" required>
             <label for="ataque.baseo">Ataque Base:</label>
             <input type="number" name="ataque.base" id="ataque.base" required>
+            <label for="ataque.rnd">Ataque Rnd:</label>
+            <input type="number" name="ataque.rnd" id="ataque.rnd" required>
             <label for="daño">Daño:</label>
             <input type="number" name="daño" id="daño" required>
             <label for="precio">Precio:</label>
@@ -70,7 +75,9 @@
                 <input type="file" name="urlImagen" id="urlImagen" accept="image/*" required style="position: absolute; opacity: 0;">
                 <span id="file-name-span" class="file-name"></span>
             </label>
+        </div>
             <button type="submit">Crear Item</button>
+            <button type="submit">Cancelar</button>
         </form>
     </div>
     <script src="/js/scriptImagen.js"></script>
