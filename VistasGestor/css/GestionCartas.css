@@ -115,11 +115,6 @@ body{
     cursor: pointer;
 }
 
-.button-container {
-    display: flex;
-    justify-content: center; /* Centra los botones horizontalmente */
-}
-
 .no-underline {
     text-decoration: none;
     color: black;
@@ -363,4 +358,11 @@ body{
     font-size: 1em;
     font-weight: 200;
     color: #fff;
+}
+
+.add-card-button2 {
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    margin-right: 10px; /* Espacio entre los botones */
 }
