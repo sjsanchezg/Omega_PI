@@ -1,5 +1,5 @@
 body{
-    background-image: url("/img/background.png");
+    background-image: url("/ViewsPI/img/background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;    
@@ -16,7 +16,7 @@ body{
 }
 
 .navbar-background {
-    background-image: url("/img/navbar.png");
+    background-image: url("/ViewsPI/img/navbar.png");
     background-size: auto;
     background-position: center center;
     min-height: 100%;
